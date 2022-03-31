@@ -1,8 +1,11 @@
+/* NavBar */
+
 .barra{
  font-family: sans-serif; 
  border-bottom: 2px solid rgb(186,179,213);
 }
 
+/* ItemListContainer */
 .encabezado{
   font-family: 'Roboto', sans-serif;
   font-weight:900;
@@ -10,22 +13,63 @@
   background-color:rgb(186,179,213);
   text-align: center;
   padding-top: 1.5em;
+  margin-bottom: 3em;
 }
 
+/* CartWidget */
 .imagen-carrito{
- margin-left: 35em;
+ margin-right: 0.5em;
  margin-top: 1em;
- width: 30px;
- height: 30px;
+ margin-bottom: 1em;
+ width: 25px;
+ height: 25px;
+}
+
+/* ItemCount */
+
+.item-count{
+  font-family: 'Roboto', sans-serif; ;
+  width: 15em;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+.flex-padre{
+  display: flex;
+  
+}
+
+.suma{
+  height: 2em;
+  width: 2em;
+}
+
+.resta{
+  height: 2em;
+  width: 2em;
+}
+
+.input-cantidad{
+  border: 1px solid black;
+  width: 10em;
+  height: 2em;
+  text-align: center;
+}
+
+.boton-agregar{
+  width: 10em;
+  margin-top: 1em;
+  margin-left: 14%;
 }
 
 
 
 @media only screen and (max-width: 768px){
   .imagen-carrito{
-    margin-left: 1em;
+    margin-right: 1em;
     width: 20px;
     height: 20px;
   }
+  
 
 }

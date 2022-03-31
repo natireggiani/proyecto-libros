@@ -1,7 +1,5 @@
 import React from 'react';
-import Navbar from 'react-bootstrap/Navbar';
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
+import {Navbar, Container, Nav}from 'react-bootstrap';
 import logo from '../Images/logo.jpg';
 import CartWidget from './CartWidget';
 
@@ -21,16 +19,18 @@ export default function NavBar() {
                   
             </Navbar.Brand>
             
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
+            <Navbar.Toggle aria-controls="basic-navbar-nav" className="me-auto" />
+            <Navbar.Collapse id="basic-navbar-nav" >
               <Nav className="me-auto">
                 <Nav.Link href="#link">Colección Astronave</Nav.Link>
                 <Nav.Link href="#link">Roque y Gervasio</Nav.Link>
                 <Nav.Link href="#link">Fuera de Colección</Nav.Link>  
               </Nav>
-              <CartWidget />
+             
             </Navbar.Collapse>
+            <CartWidget />
           </Container>
+         
         </Navbar>
        
     </header>
