@@ -1,8 +1,12 @@
 /* NavBar */
-
 .barra{
  font-family: sans-serif; 
  border-bottom: 2px solid rgb(186,179,213);
+}
+
+.barra-links:hover{
+  text-decoration: underline;
+  text-decoration-color: rgb(186,179,213);
 }
 
 /* ItemListContainer */
@@ -26,43 +30,70 @@
 }
 
 /* ItemCount */
-
 .item-count{
-  font-family: 'Roboto', sans-serif; ;
-  width: 15em;
+  font-family: 'Roboto', sans-serif; 
+  width: 8em;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
 }
 .flex-padre{
-  display: flex;
+  display: flex; 
+}
+
+.suma-resta{
+  height: 1.5em;
+  width: 2em;
+  font-weight: bolder;
   
 }
 
-.suma{
-  height: 2em;
-  width: 2em;
-}
-
-.resta{
-  height: 2em;
-  width: 2em;
+.suma-resta:hover{
+  background-color: rgb(186,179,213);
 }
 
 .input-cantidad{
   border: 1px solid black;
   width: 10em;
-  height: 2em;
+  height: 1.5em;
   text-align: center;
 }
 
 .boton-agregar{
   width: 10em;
-  margin-top: 1em;
-  margin-left: 14%;
+  font-size: 0.8em;
+  margin-bottom: 1px;
+  font-weight: bolder;
+  
+}
+
+.boton-agregar:hover{
+  background-color: rgb(186,179,213);
+}
+
+/* Item */
+
+.container-card{
+  display: flex;
+  justify-content: space-around;
 }
 
 
+.body-card{
+
+  font-family: 'Roboto', sans-serif; 
+  font-size: 0.8em;
+}
+
+.titulo-card{
+  font-size: 1.2em;
+  font-weight: bolder;
+}
+
+.imagen-card{
+  width: 12em;
+  height: 18em;
+}
 
 @media only screen and (max-width: 768px){
   .imagen-carrito{

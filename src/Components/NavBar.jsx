@@ -22,9 +22,9 @@ export default function NavBar() {
             <Navbar.Toggle aria-controls="basic-navbar-nav" className="me-auto" />
             <Navbar.Collapse id="basic-navbar-nav" >
               <Nav className="me-auto">
-                <Nav.Link href="#link">Colección Astronave</Nav.Link>
-                <Nav.Link href="#link">Roque y Gervasio</Nav.Link>
-                <Nav.Link href="#link">Fuera de Colección</Nav.Link>  
+                <Nav.Link href="#link" className='barra-links'>Colección Astronave</Nav.Link>
+                <Nav.Link href="#link" className='barra-links'>Roque y Gervasio</Nav.Link>
+                <Nav.Link href="#link" className='barra-links'>Fuera de Colección</Nav.Link>  
               </Nav>
              
             </Navbar.Collapse>
