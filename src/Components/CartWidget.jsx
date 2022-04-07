@@ -6,8 +6,11 @@ export default function CartWidget() {
 
   return (
     <>
+    <p>
       <BsCart className='imagen-carrito' />
-      <p className='imagen-carrito'>()</p>
+      <sup className='cantidad-carrito'>()</sup>
+    </p>
+      
     </>
   );
 }

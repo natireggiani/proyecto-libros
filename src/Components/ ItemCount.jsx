@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 
-export default function ItemCount({ stock}) {
+export default function ItemCount({stock}) {
     
     const [cantidad, setCantidad] = useState(1);
     const agregar = ()=>{
@@ -18,12 +18,11 @@ export default function ItemCount({ stock}) {
             setCantidad(cantidad-1)  
         }    
     }
-  
     function onAdd(){
         alert(`Estas seleccionando ${cantidad} items`)
     }
         
-  return (
+    return (
     <>
     <div className='item-count'>
         <div className='flex-padre'>
@@ -31,11 +30,9 @@ export default function ItemCount({ stock}) {
             <p className='input-cantidad'>{cantidad}</p>
             <button className='suma-resta' onClick = {()=> {agregar()}}>+</button>
         </div>
-    
         <button className='boton-agregar' onClick={() => {onAdd()}}>Agregar al Carrito</button>
     </div>
     
     </>
-  );
-
-  }
+    );
+}

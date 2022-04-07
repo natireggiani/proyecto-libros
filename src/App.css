@@ -1,7 +1,7 @@
 /* NavBar */
 .barra{
- font-family: sans-serif; 
- border-bottom: 2px solid rgb(186,179,213);
+  font-family: sans-serif; 
+  border-bottom: 2px solid rgb(186,179,213);
 }
 
 .barra-links:hover{
@@ -22,11 +22,16 @@
 
 /* CartWidget */
 .imagen-carrito{
- margin-right: 0.5em;
- margin-top: 1em;
- margin-bottom: 1em;
- width: 25px;
- height: 25px;
+  margin-right: 0.5em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  width: 25px;
+  height: 25px;
+}
+
+.cantidad-carrito{
+  margin-left: -0.5em
+
 }
 
 /* ItemCount */
@@ -42,9 +47,10 @@
 }
 
 .suma-resta{
-  height: 1.5em;
+  height: 1.8em;
   width: 2em;
   font-weight: bolder;
+  
   
 }
 
@@ -55,7 +61,7 @@
 .input-cantidad{
   border: 1px solid black;
   width: 10em;
-  height: 1.5em;
+  height: 1.8em;
   text-align: center;
 }
 
@@ -64,7 +70,6 @@
   font-size: 0.8em;
   margin-bottom: 1px;
   font-weight: bolder;
-  
 }
 
 .boton-agregar:hover{
@@ -76,11 +81,11 @@
 .container-card{
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
+  row-gap: 2em;
 }
 
-
 .body-card{
-
   font-family: 'Roboto', sans-serif; 
   font-size: 0.8em;
 }
@@ -92,7 +97,42 @@
 
 .imagen-card{
   width: 12em;
-  height: 18em;
+  height: 17em;
+}
+
+/* ITEM DETAIL */
+
+.detalle-item{
+  border: 1px solid black;
+  width: 60em;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0 auto;
+  padding: 2em;
+}
+
+.detalle-imagen{
+  width: 20em;
+  height: 30em;
+}
+
+.detalle-libro{
+  padding: 2em;
+  font-family: 'Roboto', sans-serif; 
+}
+.descripcion-libro{
+  width: 25em;
+  font-size: small;
+}
+
+.titulo-libro{
+  font-size: large;
+  font-weight: bolder;
+}
+
+.detalle-stock{
+  text-align: center;
+  margin-top: 1em;
 }
 
 @media only screen and (max-width: 768px){
@@ -101,6 +141,11 @@
     width: 20px;
     height: 20px;
   }
+  
+  .cantidad-carrito{
+    margin-left: -1.2em;
+  }
+  
   
 
 }

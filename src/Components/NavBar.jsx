@@ -15,10 +15,8 @@ export default function NavBar() {
                   width="30"
                   height="30"
                   alt='Logo'
-                  className="d-inline-block align-top"/>{' '}
-                  
+                  className="d-inline-block align-top"/>{' '}     
             </Navbar.Brand>
-            
             <Navbar.Toggle aria-controls="basic-navbar-nav" className="me-auto" />
             <Navbar.Collapse id="basic-navbar-nav" >
               <Nav className="me-auto">
@@ -26,16 +24,12 @@ export default function NavBar() {
                 <Nav.Link href="#link" className='barra-links'>Roque y Gervasio</Nav.Link>
                 <Nav.Link href="#link" className='barra-links'>Fuera de Colección</Nav.Link>  
               </Nav>
-             
             </Navbar.Collapse>
             <CartWidget />
           </Container>
-         
         </Navbar>
-       
     </header>
-    
-   </>
+    </>
   );
 }
 
