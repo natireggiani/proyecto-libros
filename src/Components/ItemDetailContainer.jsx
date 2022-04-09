@@ -1,46 +1,37 @@
 import React, {useEffect, useState} from 'react';
+import { useParams } from 'react-router-dom';
 import ItemDetail from './ItemDetail';
-
+import promesa from './Utils/promesa';
+import libros from './Utils/libros';
 
 
 export default function ItemDetailContainer() {
 
-    const[detailProd, setdetailProd] = useState({})
+    const[detailProd, setdetailProd] = useState([])
+    const {itemId} = useParams()
 
-    useEffect(() => {
+  console.log(itemId)
 
-        const getItem = new Promise((resolve, reject) => {
-        setTimeout(() => {
-        resolve(
-            {id:1,
-            titulo: 'El Efecto Phobos', 
-            autor: 'Ian Giger', 
-            precio: '$500', 
-            stock: '5',
-            imagen: 'https://http2.mlstatic.com/D_NQ_NP_2X_861118-MLA44277594418_122020-F.webp', 
-            descripcion: 'Ian Giger, el misterioso novelista sueco que vive en EEUU nos ofrece su nueva novela: el General y su ¿novia?, ¿subordinada?, ¿amiga?, el Dos Cabezas, encuentran el secreto de la gravitación universal, se roban el satélite de Marte, lo estacionan en la Patagonia y se hacen millonarios. También hay intrigas políticas y colonos marcianos, todo escrito como si Henry James se hubiera dedicado a las novelitas de kiosko con cohetes'
-            }
-            )
-        reject('Error')
-    }, 2000)    
-})
-
-getItem
+  useEffect(()=>{
+    promesa(0, libros)
     .then((res) => {
+      if(itemId){
+        setdetailProd( res.find((el) => el.id === Number(itemId)) )
+      }else{
         setdetailProd(res)
+      }
     })
-    .catch((err) => {
-        console.log(err)
-    } );
-    
+    .catch((err) => {console.log(err)} );
+  },[itemId])
 
-}, [detailProd])
 
+        
 
 
 return (
     <>
-        <ItemDetail getItem = {detailProd}/>
+    
+        <ItemDetail {...detailProd}/>
     </>
     );
 }

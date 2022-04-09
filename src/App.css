@@ -2,6 +2,9 @@
 .barra{
   font-family: sans-serif; 
   border-bottom: 2px solid rgb(186,179,213);
+  width: 100%;
+  position: fixed;
+  z-index: 100;
 }
 
 .barra-links:hover{
@@ -13,11 +16,12 @@
 .encabezado{
   font-family: 'Roboto', sans-serif;
   font-weight:900;
-  height: 10em;
+  height: 15em;
   background-color:rgb(186,179,213);
   text-align: center;
-  padding-top: 1.5em;
+  padding-top: 7em;
   margin-bottom: 3em;
+  
 }
 
 /* CartWidget */
@@ -96,7 +100,7 @@
 }
 
 .imagen-card{
-  width: 12em;
+  width: 16em;
   height: 17em;
 }
 
@@ -104,16 +108,15 @@
 
 .detalle-item{
   border: 1px solid black;
-  width: 60em;
-  align-items: center;
+  width: 70em;
   justify-content: space-around;
   margin: 0 auto;
   padding: 2em;
+  
 }
 
 .detalle-imagen{
-  width: 20em;
-  height: 30em;
+  height: 25em;
 }
 
 .detalle-libro{
@@ -145,7 +148,22 @@
   .cantidad-carrito{
     margin-left: -1.2em;
   }
-  
-  
+
+  .detalle-item{
+    flex-direction: column;
+    width: 30em;
+  }
+  .detalle-imagen{
+    width: auto;
+    margin: 0 auto;
+    height: 15em;
+  }
+/* 
+.detalle-stock{
+  text-align: center;
+  margin-top: 1em;
+  width: 15em;
+} */
+
 
 }

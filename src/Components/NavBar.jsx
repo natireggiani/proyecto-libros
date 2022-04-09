@@ -10,7 +10,7 @@ export default function NavBar() {
     <header className='barra'>
         <Navbar bg="white" expand="lg">
           <Container>
-            <Navbar.Brand href="#home">
+            <Navbar.Brand href="/">
               <img src={logo}
                   width="30"
                   height="30"
@@ -20,15 +20,19 @@ export default function NavBar() {
             <Navbar.Toggle aria-controls="basic-navbar-nav" className="me-auto" />
             <Navbar.Collapse id="basic-navbar-nav" >
               <Nav className="me-auto">
-                <Nav.Link href="#link" className='barra-links'>Colección Astronave</Nav.Link>
-                <Nav.Link href="#link" className='barra-links'>Roque y Gervasio</Nav.Link>
-                <Nav.Link href="#link" className='barra-links'>Fuera de Colección</Nav.Link>  
+                <Nav.Link href ="/categoria/Astronave" className='barra-links'>Colección Astronave</Nav.Link>
+                <Nav.Link href="/categoria/RyG" className='barra-links'>Roque y Gervasio</Nav.Link>
+                <Nav.Link href="/categoria/FC" className='barra-links'>Fuera de Colección</Nav.Link>  
               </Nav>
             </Navbar.Collapse>
             <CartWidget />
           </Container>
         </Navbar>
     </header>
+    <div className='encabezado'>
+            <h1>Libros del Cosmonauta</h1>
+            <h2>Tienda Virtual</h2>
+    </div>
     </>
   );
 }
