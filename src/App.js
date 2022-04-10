@@ -5,6 +5,7 @@ import './App.css';
 import ItemListContainer from './Components/ItemListContainer';
 import ItemDetailContainer from './Components/ItemDetailContainer';
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
+import Footer from './Components/Footer';
 
 export default function App() {
 
@@ -19,7 +20,7 @@ export default function App() {
         <Route exact path = '/detalle/:itemId' element={<ItemDetailContainer/>}/> 
         <Route path='*' element={<Navigate to='/'/>}/>
       </Routes>
-      
+      <Footer />
       
     </BrowserRouter>
       

@@ -10,7 +10,7 @@ return (
     <br></br>
     <div className='flex-padre detalle-item'>
         <div className='detalle-imagen'>
-            <img src={imagen} alt={`tapa libro ${id}`} className='detalle-imagen'/>
+            <img src={imagen} alt={`tapa libro`} className='detalle-imagen'/>
         </div>
         <div className='detalle-libro'>
             <p className='titulo-libro'>{titulo}</p>

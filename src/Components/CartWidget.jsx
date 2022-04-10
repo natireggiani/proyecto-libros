@@ -10,7 +10,7 @@ export default function CartWidget() {
       <BsCart className='imagen-carrito' />
       <sup className='cantidad-carrito'>()</sup>
     </p>
-      
+    
     </>
   );
 }
