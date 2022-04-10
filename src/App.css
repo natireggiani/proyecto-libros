@@ -40,7 +40,6 @@
 
 .cantidad-carrito{
   margin-left: -0.5em
-
 }
 
 /* ItemCount */
@@ -51,6 +50,7 @@
   flex-direction: column;
   margin: 0 auto;
 }
+
 .flex-padre{
   display: flex; 
 }
@@ -58,9 +58,7 @@
 .suma-resta{
   height: 1.8em;
   width: 2em;
-  font-weight: bolder;
-  
-  
+  font-weight: bolder; 
 }
 
 .suma-resta:hover{
@@ -117,7 +115,6 @@
   justify-content: space-around;
   margin: 0 auto;
   padding: 2em;
-  
 }
 
 .detalle-imagen{
@@ -129,6 +126,7 @@
   padding: 2em;
   font-family: 'Roboto', sans-serif; 
 }
+
 .descripcion-libro{
   width: 25em;
   font-size: small;
@@ -191,17 +189,11 @@
     flex-direction: column;
     width: 30em;
   }
+
   .detalle-imagen{
     width: auto;
     margin: 0 auto;
     height: 15em;
   }
-/* 
-.detalle-stock{
-  text-align: center;
-  margin-top: 1em;
-  width: 15em;
-} */
-
 
 }

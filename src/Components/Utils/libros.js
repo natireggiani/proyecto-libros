@@ -12,7 +12,7 @@ const libros = [
         },
     {   
         id:2,
-        titulo: 'Los gusanos gigante de la luna', 
+        titulo: 'Los gusanos gigantes de la luna', 
         autor: 'Ian Giger', 
         precio: '$500', 
         stock: '5',

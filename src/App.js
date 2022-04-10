@@ -14,17 +14,13 @@ export default function App() {
     <BrowserRouter>
       <NavBar />
       <Routes>
-        {/* esta es la ruta home  */}
         <Route exact path = '/' element={<ItemListContainer />}/>  
         <Route exact path = '/categoria/:Id' element={<ItemListContainer />}/> 
         <Route exact path = '/detalle/:itemId' element={<ItemDetailContainer/>}/> 
         <Route path='*' element={<Navigate to='/'/>}/>
       </Routes>
-      <Footer />
-      
-    </BrowserRouter>
-      
-      
+      <Footer /> 
+    </BrowserRouter>  
     </>
   );
 }

@@ -2,12 +2,10 @@ import React from 'react';
 import { Card } from 'react-bootstrap';
 import ItemCount from './ ItemCount';
 
-export default function ItemDetail({id, imagen, titulo, autor, descripcion, stock, precio}) {
+export default function ItemDetail({ imagen, titulo, autor, descripcion, stock, precio}) {
 
 return (
     <>
-    <br></br>
-    <br></br>
     <div className='flex-padre detalle-item'>
         <div className='detalle-imagen'>
             <img src={imagen} alt={`tapa libro`} className='detalle-imagen'/>
@@ -19,12 +17,8 @@ return (
             <p>{precio}</p>
             <ItemCount stock={5}/>
             <Card.Footer className="text-muted detalle-stock">{`Stock disponible ${stock}`}</Card.Footer>
-
         </div>
     </div>
-    <br></br>
-    <br></br>
-    
     </>
     );
 }

@@ -19,7 +19,7 @@ export default function ItemDetailContainer() {
     promesa(2000, libros)
     .then((res) => {
       if(itemId){
-        setdetailProd( res.find((el) => el.id === Number(itemId)) )
+        setdetailProd( res.find((el) => el.id === parseInt(itemId)) )
       }else{
         setdetailProd(res)
       }
@@ -29,23 +29,18 @@ export default function ItemDetailContainer() {
     .finally(()=>{
       setLoading(false)
     })
-    
-   
   },[itemId])
-
-
-        
 
 
 return (
     <>
-     {
+    {
       loading
       ? <div className='loading'>
           <SpinnerDotted  size={64} thickness={111} speed={100} color="rgba(186, 189, 213)" /> 
         </div>
-       : <ItemDetail {...detailProd}/>
-     }
+      : <ItemDetail {...detailProd}/>
+    }
     </>
     );
 }
