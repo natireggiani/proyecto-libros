@@ -14,7 +14,7 @@ export default function Footer() {
                 <p> Buenos Aires</p>
                 <p>ediciones.cosmonauta@gmail.com</p>
             </div>
-            <div class='footer-redes'>   
+            <div className='footer-redes'>   
                 <div>
                     <Link to="//facebook.com/ediciones.cosmonauta/?_rdc=1_rdr" target="blank"><AiFillFacebook className='footer-redes-iconos'/></Link>
                     <Link to="//instagram.com/ediciones.cosmonauta/?hl=es" target="_blank"><AiFillInstagram className='footer-redes-iconos'/></Link>

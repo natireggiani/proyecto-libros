@@ -12,8 +12,6 @@ export default function ItemDetailContainer() {
     const[loading, setLoading] = useState(false)
     const {itemId} = useParams()
 
-  console.log(itemId)
-
   useEffect(()=>{
     setLoading(true)
     promesa(2000, libros)
