@@ -14,9 +14,9 @@ return (
             <p className='titulo-libro'>{titulo}</p>
             <p>{autor}</p>
             <p className='descripcion-libro'>{descripcion}</p>
-            <p>{precio}</p>
+            <p>${precio}</p>
             <ItemCount stock={5}/>
-            <Card.Footer className="text-muted detalle-stock">{`Stock disponible ${stock}`}</Card.Footer>
+            <Card.Footer className="text-muted detalle-stock">{`Stock disponible ${stock} unidades`}</Card.Footer>
         </div>
     </div>
     </>

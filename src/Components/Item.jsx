@@ -15,7 +15,7 @@ export default function Item({id, titulo, autor, precio, imagen}) {
         <Card.Body className='body-card'>
           <Card.Title className='titulo-card'>{titulo}</Card.Title>
           <Card.Text>{autor}</Card.Text>
-          <Card.Text>{precio}</Card.Text>
+          <Card.Text>${precio}</Card.Text>
           <Link to = {`/detalle/${id}`} ><button className='boton-agregar'>Ver detalle</button></Link> 
         </Card.Body>
       </Card>
