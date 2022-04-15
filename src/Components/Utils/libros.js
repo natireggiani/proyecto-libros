@@ -85,7 +85,7 @@ const libros = [
         titulo: 'La invasión de los hijos de Vega', 
         autor: 'Angel Mosquito', 
         precio: 900, 
-        stock: 5,
+        stock: 15,
         coleccion:'FC',
         imagen: 'https://http2.mlstatic.com/D_NQ_NP_654054-MLA46433818179_062021-V.jpg', 
         descripcion: 'La nueva historieta solista de Ángel Mosquito. Una invasión extraterrestres de los temibles jipis veganos (de la estrella Vega) con un objetivo principal: no trabajar. Historieta de esas para reirse, que tampoco vinimos al mundo a sufrir.'

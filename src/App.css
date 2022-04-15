@@ -7,10 +7,15 @@
   z-index: 100;
 }
 
+.barra-links{
+  font-weight: bold;  
+}
+
 .barra-links:hover{
   text-decoration: underline;
   text-decoration-color: rgb(186,179,213);
 }
+
 
 /* ItemListContainer */
 .encabezado{
@@ -175,6 +180,12 @@
 }
 
 @media only screen and (max-width: 768px){
+  .logo{
+    width: 30px;
+    height: 30px;
+  }
+
+
   .imagen-carrito{
     margin-right: 1em;
     width: 20px;

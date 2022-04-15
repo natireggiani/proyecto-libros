@@ -13,10 +13,10 @@ export default function NavBar() {
           <Container>
             <Navbar.Brand as={Link} to="/">
               <img src={logo}
-                  width="30"
-                  height="30"
+                  width="50"
+                  height="50"
                   alt='Logo'
-                  className="d-inline-block align-top"/>{' '}  
+                  className="d-inline-block align-top logo"/>{' '}  
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" className="me-auto" />
             <Navbar.Collapse id="basic-navbar-nav" >
