@@ -41,10 +41,13 @@
   margin-bottom: 1em;
   width: 25px;
   height: 25px;
+  color: black;
 }
 
 .cantidad-carrito{
-  margin-left: -0.5em
+  margin-left: -0.5em;
+  color: black;
+  text-decoration: white;
 }
 
 /* ItemCount */
