@@ -6,15 +6,16 @@ import { Link } from 'react-router-dom';
 
 export default function CartWidget() {
   const {totalItemsCarrito} = useContext(CartContext)
-  
+  console.log(totalItemsCarrito())
   return (
     <>
-      
-    
-      <p> 
+    {
+      totalItemsCarrito () === null ? <BsCart className='imagen-carrito-null' /> 
+      :  <p> 
       <Link to='/cart'><BsCart className='imagen-carrito' /></Link>
       <sup className='cantidad-carrito'>{totalItemsCarrito()}</sup>
       </p>
+    }
     </>
   );
 }

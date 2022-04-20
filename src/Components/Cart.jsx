@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import {BsTrash} from "react-icons/bs";
 
 export default function Cart() {
-    const {carrito, carritoVacio, limpiarCarrito, removerDeCarrito, totalPrecioCarrito, seguirComprando} = useContext(CartContext)
+    const {carrito, limpiarCarrito, removerDeCarrito, totalPrecioCarrito, seguirComprando} = useContext(CartContext)
     
     console.log(carrito)
     
@@ -14,7 +14,7 @@ export default function Cart() {
     return (
     <>
         {
-        carritoVacio
+        totalPrecioCarrito() === 0 
         ?   <div>
                 <h1 className='carrito-titulo'>El carrito está vacío</h1>
                 <div className='boton-agregar-cart2'>

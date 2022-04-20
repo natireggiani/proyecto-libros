@@ -45,6 +45,15 @@
   color: black;
 }
 
+.imagen-carrito-null{
+  margin-right: 0.5em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  width: 25px;
+  height: 25px;
+  color:silver;
+}
+
 .cantidad-carrito{
   margin-left: -0.5em;
   color: black;
@@ -52,12 +61,7 @@
   
 }
 
-.vacio{
-  display: none
-}
-.lleno{
-  display: visible;
-}
+
 
 /* ItemCount */
 .item-count{
