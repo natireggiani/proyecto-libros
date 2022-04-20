@@ -9,6 +9,8 @@ export default function CartWidget() {
   
   return (
     <>
+      
+    
       <p> 
       <Link to='/cart'><BsCart className='imagen-carrito' /></Link>
       <sup className='cantidad-carrito'>{totalItemsCarrito()}</sup>

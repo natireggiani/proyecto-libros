@@ -13,7 +13,7 @@ const removerDeCarrito = (id) => {
     setCarrito(carrito.filter((el) => el.id !== id))
 }
 const totalItemsCarrito = () => {
-    return carrito.reduce((acc, e) => acc + e.cantidad, 0)
+    return carrito.reduce((acc, e) => acc + e.cantidad, null)
 }
 
 const totalPrecioCarrito = () => {
