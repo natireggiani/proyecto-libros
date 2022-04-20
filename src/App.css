@@ -26,6 +26,7 @@
   text-align: center;
   padding-top: 7em;
   margin-bottom: 3em;
+  width: 100%;
 }
 
 .loading{
@@ -48,6 +49,13 @@
   margin-left: -0.5em;
   color: black;
   text-decoration: white;
+}
+
+.vacio{
+  display: none
+}
+.lleno{
+  display: visible;
 }
 
 /* ItemCount */
@@ -81,6 +89,7 @@
 }
 
 .boton-agregar{
+  font-family: 'Roboto', sans-serif; 
   width: 10em;
   font-size: 0.8em;
   margin-bottom: 1px;
@@ -182,6 +191,101 @@
   margin-right: 0.2em;
 }
 
+/* IMAGEN CARRITO */
+
+.carrito-titulo{
+  font-family:'Roboto', sans-serif; 
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.carrito-card{
+  width: 30em;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  height: 14em;
+}
+
+.carrito-card-body{
+  font-family:'Roboto', sans-serif; 
+  width: 20em;
+}
+
+.carrito-card-img{
+  width: 7em;
+  align-self: center;
+}
+
+.carrito-card-img2{
+  width: 5em;
+  height: 5em;
+  align-self: center;
+  margin-left: 15px;
+}
+
+.list-group-flush{
+  font-size: 12px;
+}
+
+.carrito-card-titulo{
+  font-size: 15px;
+}
+
+.boton-cart{
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+.boton-agregar-cart{
+  font-family: 'Roboto', sans-serif; 
+  width: 10em;
+  height: 3em;
+  font-size: 0.8em;
+  margin-bottom: 1px;
+  margin-left: 2em;
+}
+
+.boton-agregar-cart:hover{
+  background-color: rgb(186,179,213);
+}
+
+.boton-trash{
+  height: 2em;
+  text-align: center;
+  background-color: white;
+  align-self: center;
+  margin-left: 5px;
+  border: transparent;
+}
+
+.icono-trash{
+  font-weight: bolder;
+  height: 20px;
+  width: 20px;
+}
+
+.icono-trash:hover{
+  color: rgb(186,179,213);
+}
+
+.boton-agregar-cart2{
+  width: 150px;
+  height: 100px;
+  margin: 0 auto;
+  font-family: 'Roboto', sans-serif;
+}
+
+.seguir-comprando{
+  height: 50px;
+  width: 150px;
+}
+
+.seguir-comprando:hover{
+  background-color: rgb(186,179,213);
+}
+
 @media only screen and (max-width: 768px){
   .logo{
     width: 30px;
@@ -208,6 +312,11 @@
     width: auto;
     margin: 0 auto;
     height: 15em;
+  }
+
+  .carrito-card{
+    width: 20em;
+    height: 16em;
   }
 
 }

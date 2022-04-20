@@ -5,18 +5,18 @@ import ItemCount from './ ItemCount';
 import {CartContext} from './CartContext';
 import { Link } from 'react-router-dom';
 
+
 export default function ItemDetail({id, imagen, titulo, autor, descripcion, stock, precio}) {
     const [quantity, setQuantity] = useState(0)
 
-    const {carrito, agregarAlCarrito, estaEnCarrito} = useContext(CartContext)
-    console.log(carrito)
+    const {agregarAlCarrito, estaEnCarrito} = useContext(CartContext)
 
     function handleOnAdd (cantidad){
         setQuantity(cantidad);
         if(estaEnCarrito(id) === (false)){
-            const addItem = {id, titulo, autor, precio, stock, cantidad}
+            const addItem = {id, imagen, titulo, autor, precio, stock, cantidad}
             agregarAlCarrito(addItem)   
-        }    
+            }    
         }
 
     console.log(quantity)
@@ -32,7 +32,6 @@ return (
             <p className='descripcion-libro'>{descripcion}</p>
             <p>${precio}</p>
             {
-                
                 estaEnCarrito(id)
                 ?<Link to='/cart'><button className='boton-agregar'>Ver compra</button></Link>
                 :<div className='item-count'>
@@ -40,7 +39,7 @@ return (
                 </div>
             }
             <Card.Footer className="text-muted detalle-stock">{`Stock disponible ${stock} unidades`}</Card.Footer>
-        </div>
+        </div>  
     </div>
     </>
     );
