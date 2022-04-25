@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 export default function CartWidget() {
   const {totalItemsCarrito} = useContext(CartContext)
-  console.log(totalItemsCarrito())
+  
   return (
     <>
     {

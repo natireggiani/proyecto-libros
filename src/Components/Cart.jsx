@@ -5,6 +5,7 @@ import { Card, ListGroup, ListGroupItem } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import {BsTrash} from "react-icons/bs";
 
+
 export default function Cart() {
     const {carrito, limpiarCarrito, removerDeCarrito, totalPrecioCarrito, seguirComprando} = useContext(CartContext)
     
@@ -24,8 +25,8 @@ export default function Cart() {
         :   <div>
                 <h1 className='carrito-titulo'>Tu Compra:</h1>
                 <div >
-                {carrito.map((item) => ( 
-                    <Card className='carrito-card' >
+                {carrito.map((item)=>
+                    <Card className='carrito-card' key={item.id}>
                         <div className='flex-padre'>
                             <div className='carrito-card-img'>
                                 <Card.Img variant="top" src={item.imagen} className='carrito-card-img2' alt='iamgen'/>
@@ -44,7 +45,7 @@ export default function Cart() {
                         <button className='boton-trash'  onClick = {()=>removerDeCarrito(item.id)}><BsTrash className='icono-trash'/></button>
                         </div>
                     </Card> 
-                ))}  
+                )}  
                 </div>
             <h1 className='carrito-titulo'>Total a pagar: ${totalPrecioCarrito()}</h1>
             <div className='boton-cart'>

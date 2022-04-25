@@ -2,9 +2,7 @@ import React, {useEffect, useState} from 'react';
 import { useParams } from 'react-router-dom';
 import ItemDetail from './ItemDetail';
 import { SpinnerDotted } from 'spinners-react';
-import promesa from './Utils/promesa';
-import libros from './Utils/libros';
-
+import { doc, getDoc, getFirestore } from 'firebase/firestore';
 
 export default function ItemDetailContainer() {
 
@@ -14,19 +12,16 @@ export default function ItemDetailContainer() {
 
   useEffect(()=>{
     setLoading(true)
-    promesa(2000, libros)
-    .then((res) => {
-      if(itemId){
-        setdetailProd( res.find((el) => el.id === parseInt(itemId)) )
-      }else{
-        setdetailProd(res)
-      }
-    })
-    .catch((err) => {console.log(err)
-    })
-    .finally(()=>{
-      setLoading(false)
-    })
+    const db = getFirestore()
+    const libroRef = doc(db, 'libros', itemId)
+    getDoc(libroRef)
+      .then((doc) => {setdetailProd({id: doc.id, ...doc.data()})
+      })
+      .catch((err) => {console.log(err)
+      })
+      .finally(()=>{
+        setLoading(false)
+      })
   },[itemId])
 
 

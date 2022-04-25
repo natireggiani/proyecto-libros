@@ -1,9 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import ItemList from './ItemList';
-import promesa from './Utils/promesa';
-import libros from './Utils/libros';
 import { SpinnerDotted } from 'spinners-react';
 import { useParams } from 'react-router-dom';
+import { collection, getDocs, getFirestore, query, where, orderBy } from 'firebase/firestore';
 
 export default function ItemListContainer() {
 
@@ -13,20 +12,18 @@ export default function ItemListContainer() {
 
   useEffect(()=>{
     setLoading(true)
-    promesa(2000, libros)
-    .then((res) => {
-      if(Id){
-        setProd( res.filter((el) => el.coleccion === Id) )
-      }else{
-        setProd(res)
-      }
-    })
-    .catch((err) => {console.log(err)
-    })
-    .finally(()=>{
-      setLoading(false)
-    })
-
+    const db = getFirestore();
+    const librosCollection = query(collection (db, 'libros'), orderBy("precio"))
+    const q = Id ? query(collection (db, 'libros'), where('coleccion', '==', Id)) : librosCollection
+      
+    getDocs(q)
+      .then((res) => {setProd(res.docs.map((doc) => ({id: doc.id,...doc.data()})))
+        })
+      .catch((err) => {console.log(err)
+      })
+      .finally(()=>{
+        setLoading(false)
+      })
   },[Id])
 
   return (

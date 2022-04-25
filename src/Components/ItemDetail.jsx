@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useContext } from 'react';
 import { Card } from 'react-bootstrap';
 import ItemCount from './ ItemCount';
@@ -7,19 +7,19 @@ import { Link } from 'react-router-dom';
 
 
 export default function ItemDetail({id, imagen, titulo, autor, descripcion, stock, precio}) {
-    const [quantity, setQuantity] = useState(0)
+    // const [quantity, setQuantity] = useState(0)
 
     const {agregarAlCarrito, estaEnCarrito} = useContext(CartContext)
 
-    function handleOnAdd (cantidad){
-        setQuantity(cantidad);
+    function onAdd (cantidad){
+        // setQuantity(cantidad);
         if(estaEnCarrito(id) === (false)){
             const addItem = {id, imagen, titulo, autor, precio, stock, cantidad}
             agregarAlCarrito(addItem)   
             }    
         }
 
-    console.log(quantity)
+    // console.log(quantity)
 return (
     <>
     <div className='flex-padre detalle-item'>
@@ -35,7 +35,7 @@ return (
                 estaEnCarrito(id)
                 ?<Link to='/cart'><button className='boton-agregar'>Ver compra</button></Link>
                 :<div className='item-count'>
-                <ItemCount stock={stock}  onAdd={handleOnAdd}/>
+                <ItemCount stock={stock}  onAdd={onAdd}/>
                 </div>
             }
             <Card.Footer className="text-muted detalle-stock">{`Stock disponible ${stock} unidades`}</Card.Footer>
