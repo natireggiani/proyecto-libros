@@ -24,7 +24,7 @@ return (
     <>
     <div className='flex-padre detalle-item'>
         <div className='detalle-imagen'>
-            <img src={imagen} alt={`tapa libro ${id}`} className='detalle-imagen'/>
+            <img src={imagen} alt={`tapa libro ${id}`} className='detalle-imagen animate__animated animate__zoomIn'/>
         </div>
         <div className='detalle-libro'>
             <p className='titulo-libro'>{titulo}</p>

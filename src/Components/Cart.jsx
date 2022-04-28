@@ -9,7 +9,6 @@ import {BsTrash} from "react-icons/bs";
 export default function Cart() {
     const {carrito, limpiarCarrito, removerDeCarrito, totalPrecioCarrito, seguirComprando} = useContext(CartContext)
     
-    console.log(carrito)
     
     
     return (
@@ -17,7 +16,7 @@ export default function Cart() {
         {
         totalPrecioCarrito() === 0 
         ?   <div>
-                <h1 className='carrito-titulo'>El carrito está vacío</h1>
+                <h1 className='carrito-titulo animate__animated animate__heartBeat'>El carrito está vacío</h1>
                 <div className='boton-agregar-cart2'>
                     <Link to='/'><button className='seguir-comprando' onClick= {seguirComprando}>Seguir comprando</button></Link>
                 </div>
@@ -50,7 +49,7 @@ export default function Cart() {
             <h1 className='carrito-titulo'>Total a pagar: ${totalPrecioCarrito()}</h1>
             <div className='boton-cart'>
                 <button className='boton-agregar-cart' onClick = {limpiarCarrito}>Vaciar Carrito</button>
-                <button className='boton-agregar-cart'><b>Finalizar Compra</b></button>
+                <Link to='/formulario'><button className='boton-agregar-cart'><b>Finalizar Compra</b></button></Link>
                 <Link to='/'><button className='boton-agregar-cart'>Seguir comprando</button></Link>
             </div>
             </div>

@@ -8,6 +8,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
 import Footer from './Components/Footer';
 import Cart from './Components/Cart';
 import CartContextProvider  from './Components/CartContext';
+import Form from './Components/Form';
 
 export default function App() {
   
@@ -22,6 +23,7 @@ export default function App() {
           <Route exact path = '/categoria/:Id' element={<ItemListContainer />}/> 
           <Route exact path = '/detalle/:itemId' element={<ItemDetailContainer/>}/> 
           <Route exact path = '/cart' element={<Cart/>}></Route>
+          <Route exact path = '/formulario' element={<Form/>}></Route>
           <Route path='*' element={<Navigate to='/'/>}/>
         </Routes>
         <Footer /> 

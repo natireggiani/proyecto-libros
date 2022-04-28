@@ -17,7 +17,6 @@
 }
 
 
-/* ItemListContainer */
 .encabezado{
   font-family: 'Roboto', sans-serif;
   font-weight:900;
@@ -26,8 +25,9 @@
   text-align: center;
   padding-top: 7em;
   margin-bottom: 3em;
-  width: 100%;
+  width: 100vw;
 }
+/* ItemListContainer */
 
 .loading{
   width: 10em;
@@ -116,17 +116,18 @@
 
 .body-card{
   font-family: 'Roboto', sans-serif; 
-  font-size: 0.8em;
+  font-size: 0.8em; 
 }
 
 .titulo-card{
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-weight: bolder;
+  
 }
 
 .imagen-card{
-  width: 16em;
-  height: 17em;
+  height: 15em;
+  object-fit: contain;
 }
 
 /* ITEM DETAIL */
@@ -162,6 +163,85 @@
 .detalle-stock{
   text-align: center;
   margin-top: 1em;
+}
+
+.animate__animated.animate__zoomIn {
+  --animate-duration: 2.5s;
+}
+
+.animate__animated.animate__heartBeat{
+  --animate-duration: 2.5s;
+}
+
+/* FORMULARIO */
+
+.legend{
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-color:rgb(186,179,213);
+  margin-top: 1.5em;
+  font-family: 'Roboto', sans-serif; 
+  font-weight:550;
+}
+
+.formulario{
+  height: 25em;
+  width: 30em;
+  margin: 0 auto;
+  border:1px solid silver;
+  font-family: 'Roboto', sans-serif; 
+}
+
+.formulario-input{
+  margin-top: 2em;
+  width: 25em;
+  text-align: center;
+}
+
+.formulario-submit{
+  width: 25em;
+  margin-top: 3em;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.formulario-submit:hover{
+  background-color: rgb(186,179,213);;
+}
+
+
+.carrito-titulo-form1{
+  font-family:'Roboto', sans-serif; 
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.5em;
+}
+
+.carrito-titulo-form{
+  font-family:'Roboto', sans-serif; 
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.flex-padre-form{
+  width: 35em;
+  display: flex;
+  flex-direction: column;
+  margin:0 auto;
+  align-content: center;
+  /* border: 1px solid red; */
+}
+
+.boton-volver{
+  font-family: 'Roboto', sans-serif; 
+  width: 10em;
+  height: 3em;
+  font-size: 0.8em;
+  margin-left: 38%;
+}
+
+.boton-volver:hover{
+  background-color: rgb(186,179,213);
 }
 
 /* FOOTER */
@@ -224,7 +304,8 @@
 
 .carrito-card-img2{
   width: 5em;
-  height: 5em;
+  /* height: 5em; */
+  object-fit: contain;
   align-self: center;
   margin-left: 15px;
 }
@@ -290,13 +371,25 @@
 .seguir-comprando:hover{
   background-color: rgb(186,179,213);
 }
+@media only screen and (max-width: 1300px){
 
+  .detalle-item{
+    flex-direction: column;
+    width: 25em;
+    
+  }
+
+  .detalle-imagen{
+    width: auto;
+    margin: 0 auto;
+    height: 15em;
+  }
+}
 @media only screen and (max-width: 768px){
   .logo{
     width: 30px;
     height: 30px;
   }
-
 
   .imagen-carrito{
     margin-right: 1em;
@@ -310,11 +403,17 @@
 
   .detalle-item{
     flex-direction: column;
-    width: 30em;
+    /* width: 25em; */
+    width: 90vw;
   }
 
+.descripcion-libro{
+  width: 70vw;
+  font-size: small;
+}
+
   .detalle-imagen{
-    width: auto;
+    width: 70vw;
     margin: 0 auto;
     height: 15em;
   }
@@ -323,5 +422,37 @@
     width: 20em;
     height: 16em;
   }
+
+  .carrito-card-titulo{
+    font-size: 13px;
+  }
+
+  .carrito-titulo-form1{
+    font-size: 1.5em;
+  }
+
+  .carrito-titulo-form{
+    font-size: 1em;
+  }
+
+  .boton-volver{
+    width: 8em;
+    height: 2em; 
+  }
+
+.formulario{
+  width: 90vw;
+}
+
+.formulario-input{
+  width: 70vw;
+}
+
+.formulario-submit{
+  width: 70vw;
+}
+.flex-padre-form{
+  width: 70vw;
+}
 
 }
