@@ -1,13 +1,13 @@
 import React from 'react';
 import { useContext } from 'react';
 import { CartContext} from './CartContext';
-import { addDoc, collection, getFirestore } from 'firebase/firestore';
+import { doc, addDoc, collection, getDoc, getFirestore, Timestamp, updateDoc } from 'firebase/firestore';
 import { useForm } from 'react-hook-form';
 import { useState } from 'react';
 import { Link, Navigate } from 'react-router-dom';
 
 export default function Form() {
-    const {carrito, totalPrecioCarrito, limpiarCarrito} = useContext(CartContext)
+    const {carrito, totalPrecioCarrito, totalItemsCarrito, limpiarCarrito} = useContext(CartContext)
     const { register, handleSubmit, formState: { errors } } = useForm();
     
     console.log(errors);
@@ -19,7 +19,8 @@ export default function Form() {
                 buyer:{
                     name: data.Name,
                     email:data.Email,
-                    tel:data.Tel
+                    tel:data.Tel,
+                    date: Timestamp.fromDate(new Date()),
                 },
                 items: carrito,
                 total: totalPrecioCarrito()
@@ -29,6 +30,13 @@ export default function Form() {
             const ordersCollection = collection(db, 'orders')
             addDoc(ordersCollection, order)
             .then((res)=> {
+                carrito.forEach((item)=>{
+                    const docRef = doc(db, 'libros', item.id)
+                    getDoc(docRef)
+                        .then((dbDoc)=>{
+                            updateDoc(docRef, {stock:dbDoc.data().stock-item.cantidad})
+                        })
+                })
                 setOrderId(res.id)
                 limpiarCarrito()
             })
@@ -59,17 +67,20 @@ export default function Form() {
     
     return (
         <>
-        <div className='formulario'>
             <center>
-            <form onSubmit={handleSubmit(onSubmit)}>
-                <legend className='legend'>Ingrese sus datos:</legend>
+            <form onSubmit={handleSubmit(onSubmit)} className='formulario'>
+                <div className='resumen-compra'>
+                    <h3 className='legend'>Resumen de tu compra:</h3>
+                    <p className='legend1'>{totalItemsCarrito()} libros</p>
+                    <p className='legend1'>Total a pagar: ${totalPrecioCarrito()}</p>
+                </div>
+                <legend className='legend'>Ingrese sus datos para finalizar:</legend>
                 <input type="text" className="formulario-input" placeholder="Nombre Completo" {...register("Name", {required: true, maxLength: 80})} />
                 <input type="text" className="formulario-input" placeholder="Email" {...register("Email", {required: true, pattern: /^\S+@\S+$/i})} />
                 <input type="tel" className="formulario-input" placeholder="Mobile number" {...register("Tel", {required: true, minLength: 6, maxLength: 12})} />
                 <input type ="submit" className="formulario-submit"/>
             </form>
-            </center>   
-        </div>
+            </center>       
     </>
     );
 }

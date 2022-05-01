@@ -99,11 +99,14 @@
   font-size: 0.8em;
   margin-bottom: 1px;
   font-weight: bolder;
+  margin-right: 1em;
 }
+
 
 .boton-agregar:hover{
   background-color: rgb(186,179,213);
 }
+
 
 /* Item */
 
@@ -175,6 +178,13 @@
 
 /* FORMULARIO */
 
+.resumen-compra{
+  background-color:rgb(213, 208, 231);
+  height: 11em;
+  padding-top: 0.1em;
+  
+}
+
 .legend{
   text-align: center;
   text-decoration: underline;
@@ -185,7 +195,7 @@
 }
 
 .formulario{
-  height: 25em;
+  height:35em;
   width: 30em;
   margin: 0 auto;
   border:1px solid silver;
@@ -413,9 +423,9 @@
 }
 
   .detalle-imagen{
-    width: 70vw;
+    max-width: auto;
     margin: 0 auto;
-    height: 15em;
+    height: 10em;
   }
 
   .carrito-card{

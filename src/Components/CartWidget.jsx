@@ -9,13 +9,10 @@ export default function CartWidget() {
   
   return (
     <>
-    {
-      totalItemsCarrito () === null ? <BsCart className='imagen-carrito-null' /> 
-      :  <p> 
+      <p> 
       <Link to='/cart'><BsCart className='imagen-carrito' /></Link>
       <sup className='cantidad-carrito'>{totalItemsCarrito()}</sup>
       </p>
-    }
     </>
   );
 }

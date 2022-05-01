@@ -6,7 +6,7 @@ import { doc, getDoc, getFirestore } from 'firebase/firestore';
 
 export default function ItemDetailContainer() {
 
-    const[detailProd, setdetailProd] = useState()
+    const[detailProd, setdetailProd] = useState({})
     const[loading, setLoading] = useState(false)
     const {itemId} = useParams()
 

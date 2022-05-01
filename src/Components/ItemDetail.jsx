@@ -7,19 +7,18 @@ import { Link } from 'react-router-dom';
 
 
 export default function ItemDetail({id, imagen, titulo, autor, descripcion, stock, precio}) {
-    // const [quantity, setQuantity] = useState(0)
+
 
     const {agregarAlCarrito, estaEnCarrito} = useContext(CartContext)
 
     function onAdd (cantidad){
-        // setQuantity(cantidad);
+
         if(estaEnCarrito(id) === (false)){
             const addItem = {id, imagen, titulo, autor, precio, stock, cantidad}
             agregarAlCarrito(addItem)   
             }    
         }
 
-    // console.log(quantity)
 return (
     <>
     <div className='flex-padre detalle-item'>
@@ -33,7 +32,10 @@ return (
             <p>${precio}</p>
             {
                 estaEnCarrito(id)
-                ?<Link to='/cart'><button className='boton-agregar'>Ver compra</button></Link>
+                ?<div>
+                    <Link to='/cart'><button className='boton-agregar'>Ver compra</button></Link>
+                    <Link to='/'><button className='boton-agregar'>Seguir comprando</button></Link>
+                </div>
                 :<div className='item-count'>
                 <ItemCount stock={stock}  onAdd={onAdd}/>
                 </div>
