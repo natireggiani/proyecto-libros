@@ -1,5 +1,6 @@
 import React from 'react';
 import { useContext } from 'react';
+import { Button } from 'react-bootstrap';
 import { CartContext} from './CartContext';
 import { doc, addDoc, collection, getDoc, getFirestore, Timestamp, updateDoc } from 'firebase/firestore';
 import { useForm } from 'react-hook-form';
@@ -54,7 +55,7 @@ export default function Form() {
                     <h2 className='carrito-titulo-form1'>Gracias por tu compra!</h2>
                     <h3 className='carrito-titulo-form'>Tu numero de orden es: </h3>
                     <h3 className='carrito-titulo-form'><b>{orderId}</b></h3>
-                    <Link to='/'><button className='boton-volver'>Volver</button></Link>
+                    <Link to='/'><Button variant='light' className='boton-volver'>Volver</Button></Link>
                 </div>
                 </>
             )

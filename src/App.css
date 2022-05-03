@@ -95,20 +95,47 @@
 
 .boton-agregar{
   font-family: 'Roboto', sans-serif; 
+  width: 15em;
+  font-size: 0.8em;
+  margin-bottom: 1px;
+  font-weight: bolder;
+  margin-right: 1em;
+  border: 1px solid silver;
+}
+
+.boton-count{
+  font-family: 'Roboto', sans-serif; 
   width: 10em;
   font-size: 0.8em;
   margin-bottom: 1px;
   font-weight: bolder;
   margin-right: 1em;
+  border: 1px solid silver;
 }
-
 
 .boton-agregar:hover{
   background-color: rgb(186,179,213);
 }
 
+.boton-count:hover{
+  background-color: rgb(186,179,213);
+}
+
 
 /* Item */
+.boton-ver{
+  font-family: 'Roboto', sans-serif; 
+  width: 10em;
+  font-size: 0.8em;
+  margin-bottom: 1px;
+  font-weight: bolder;
+  margin-right: 1em;
+  border: 1px solid silver;
+}
+
+.boton-ver:hover{
+  background-color: rgb(186,179,213);
+}
 
 .container-card{
   display: flex;
@@ -248,8 +275,9 @@
   font-family: 'Roboto', sans-serif; 
   width: 10em;
   height: 3em;
-  font-size: 0.8em;
-  margin-left: 38%;
+  font-size: 1em;
+  margin-left: 36%;
+  border: 1px solid silver;
 }
 
 .boton-volver:hover{
@@ -338,11 +366,12 @@
 
 .boton-agregar-cart{
   font-family: 'Roboto', sans-serif; 
-  width: 10em;
+  width: 12em;
   height: 3em;
   font-size: 0.8em;
   margin-bottom: 1px;
   margin-left: 2em;
+  border: 1px solid silver;
 }
 
 .boton-agregar-cart:hover{
@@ -376,8 +405,9 @@
 }
 
 .seguir-comprando{
-  height: 50px;
-  width: 150px;
+  height: 60px;
+  width: 170px;
+  border: 1px solid silver;
 }
 
 .seguir-comprando:hover{
@@ -415,14 +445,13 @@
 
   .detalle-item{
     flex-direction: column;
-    /* width: 25em; */
     width: 90vw;
   }
 
-.descripcion-libro{
+  .descripcion-libro{
   width: 70vw;
   font-size: small;
-}
+  }
 
   .detalle-imagen{
     max-width: auto;
@@ -451,10 +480,13 @@
     width: 8em;
     height: 2em; 
   }
+  .seguir-comprando{
+    height: 2.5em;
+  }
 
-.formulario{
+  .formulario{
   width: 90vw;
-}
+  }
 
 .formulario-input{
   width: 70vw;

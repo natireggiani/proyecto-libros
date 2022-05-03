@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Card } from 'react-bootstrap';
+import { Card, Button} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 
@@ -16,7 +16,7 @@ export default function Item({id, titulo, autor, precio, imagen}) {
           <Card.Title className='titulo-card'>{titulo}</Card.Title>
           <Card.Text>{autor}</Card.Text>
           <Card.Text>${precio}</Card.Text>
-          <Link to = {`/detalle/${id}`} ><button className='boton-agregar'>Ver detalle</button></Link> 
+          <Link to = {`/detalle/${id}`} ><Button variant='light' className='boton-ver'>Ver detalle</Button></Link> 
         </Card.Body>
       </Card>
     </>

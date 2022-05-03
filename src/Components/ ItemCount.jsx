@@ -1,5 +1,5 @@
 import React, { useState }from 'react';
-
+import {Button} from 'react-bootstrap';
 
 export default function ItemCount({stock, onAdd} ) {
     const [cantidad, setCantidad]= useState(1);
@@ -27,7 +27,7 @@ export default function ItemCount({stock, onAdd} ) {
             <p className='input-cantidad'>{cantidad}</p>
             <button className='suma-resta' onClick = {sumar}>+</button>
         </div>
-        <button className='boton-agregar' onClick={()=>onAdd(cantidad)}>Agregar al Carrito</button>
+        <Button variant='light' className='boton-count' onClick={()=>onAdd(cantidad)}>Agregar al Carrito</Button>
     </div>
     
     </>

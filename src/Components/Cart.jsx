@@ -1,7 +1,7 @@
 import React from 'react';
 import { useContext } from 'react';
 import { CartContext} from './CartContext';
-import { Card, ListGroup, ListGroupItem } from 'react-bootstrap';
+import { Card, ListGroup, ListGroupItem, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import {BsTrash} from "react-icons/bs";
 
@@ -18,7 +18,7 @@ export default function Cart() {
         ?   <div>
                 <h1 className='carrito-titulo animate__animated animate__heartBeat'>El carrito está vacío</h1>
                 <div className='boton-agregar-cart2'>
-                    <Link to='/'><button className='seguir-comprando' onClick= {seguirComprando}>Seguir comprando</button></Link>
+                    <Link to='/'><Button variant='light' className='seguir-comprando' onClick= {seguirComprando}>Seguir comprando</Button></Link>
                 </div>
             </div>
         :   <div>
@@ -48,9 +48,9 @@ export default function Cart() {
                 </div>
             <h1 className='carrito-titulo'>Total a pagar: ${totalPrecioCarrito()}</h1>
             <div className='boton-cart'>
-                <button className='boton-agregar-cart' onClick = {limpiarCarrito}>Vaciar Carrito</button>
-                <Link to='/formulario'><button className='boton-agregar-cart'><b>Finalizar Compra</b></button></Link>
-                <Link to='/'><button className='boton-agregar-cart'>Seguir comprando</button></Link>
+                <Button variant='light' className='boton-agregar-cart' onClick = {limpiarCarrito}>Vaciar Carrito</Button>
+                <Link to='/formulario'><Button variant='light' className='boton-agregar-cart'><b>Finalizar Compra</b></Button></Link>
+                <Link to='/'><Button variant='light' className='boton-agregar-cart'>Seguir comprando</Button></Link>
             </div>
             </div>
             }

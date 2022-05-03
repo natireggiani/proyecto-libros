@@ -1,6 +1,6 @@
 import React from 'react';
 import { useContext } from 'react';
-import { Card } from 'react-bootstrap';
+import { Card, Button} from 'react-bootstrap';
 import ItemCount from './ ItemCount';
 import {CartContext} from './CartContext';
 import { Link } from 'react-router-dom';
@@ -33,8 +33,8 @@ return (
             {
                 estaEnCarrito(id)
                 ?<div>
-                    <Link to='/cart'><button className='boton-agregar'>Ver compra</button></Link>
-                    <Link to='/'><button className='boton-agregar'>Seguir comprando</button></Link>
+                    <Link to='/cart'><Button variant='light'className='boton-agregar'>Ver compra</Button></Link>
+                    <Link to='/'><Button variant='light' className='boton-agregar'>Seguir comprando</Button></Link>
                 </div>
                 :<div className='item-count'>
                 <ItemCount stock={stock}  onAdd={onAdd}/>
