@@ -25,6 +25,10 @@ const limpiarCarrito = () =>  {
     setCarritoVacio(true)
 }
 
+const checkOut = () => {
+    return carrito.map((e) => <p>{e.titulo}</p> )
+}
+
 const seguirComprando = () => setCarritoVacio(false)
 
 const estaEnCarrito = (id) => {
@@ -32,7 +36,7 @@ const estaEnCarrito = (id) => {
 }
 
     return(
-        <CartContext.Provider value = {{carrito, agregarAlCarrito, limpiarCarrito, totalPrecioCarrito, totalItemsCarrito, removerDeCarrito, estaEnCarrito, carritoVacio, seguirComprando}}>
+        <CartContext.Provider value = {{carrito, agregarAlCarrito, limpiarCarrito, totalPrecioCarrito, totalItemsCarrito, removerDeCarrito, estaEnCarrito, carritoVacio, seguirComprando, checkOut}}>
             {children}
         </CartContext.Provider>
     )     

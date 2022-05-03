@@ -180,8 +180,9 @@
 
 .resumen-compra{
   background-color:rgb(213, 208, 231);
-  height: 11em;
+  height: auto;
   padding-top: 0.1em;
+  padding-bottom: 1em;
   
 }
 
@@ -195,11 +196,12 @@
 }
 
 .formulario{
-  height:35em;
+  height: auto;
   width: 30em;
   margin: 0 auto;
   border:1px solid silver;
   font-family: 'Roboto', sans-serif; 
+  padding-bottom: 3em;
 }
 
 .formulario-input{

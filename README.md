@@ -14,3 +14,6 @@ Por otro lado, ya con un criterio propio a este proyecto
 instale:
 react-hook-form: básicamente por curiosidad y terminó resultando útil tanto para captar los datos del formulario como para validarlo.
 spinners-react: para poder utilizar un spinner de carga.
+
+Firebase deploy:
+https://proyecto-libros-f2a56.web.app

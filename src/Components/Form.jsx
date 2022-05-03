@@ -7,7 +7,7 @@ import { useState } from 'react';
 import { Link, Navigate } from 'react-router-dom';
 
 export default function Form() {
-    const {carrito, totalPrecioCarrito, totalItemsCarrito, limpiarCarrito} = useContext(CartContext)
+    const {carrito, totalPrecioCarrito, totalItemsCarrito, limpiarCarrito, checkOut} = useContext(CartContext)
     const { register, handleSubmit, formState: { errors } } = useForm();
     
     console.log(errors);
@@ -46,7 +46,7 @@ export default function Form() {
         }
         sendOrder()
         }
-        
+       
         if (orderId) {
             return (
                 <>
@@ -71,8 +71,9 @@ export default function Form() {
             <form onSubmit={handleSubmit(onSubmit)} className='formulario'>
                 <div className='resumen-compra'>
                     <h3 className='legend'>Resumen de tu compra:</h3>
-                    <p className='legend1'>{totalItemsCarrito()} libros</p>
-                    <p className='legend1'>Total a pagar: ${totalPrecioCarrito()}</p>
+                    <p>{totalItemsCarrito()} libros</p>
+                    <div>{checkOut()}</div>
+                    <p><b>Total a pagar: ${totalPrecioCarrito()}</b></p>
                 </div>
                 <legend className='legend'>Ingrese sus datos para finalizar:</legend>
                 <input type="text" className="formulario-input" placeholder="Nombre Completo" {...register("Name", {required: true, maxLength: 80})} />
@@ -84,5 +85,4 @@ export default function Form() {
     </>
     );
 }
-
 

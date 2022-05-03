@@ -17,7 +17,7 @@ export default function ItemCount({stock, onAdd} ) {
             setCantidad(cantidad-1)  
         }    
     }
-
+    
 
     return (
     <>  
