@@ -21,5 +21,5 @@ https://proyecto-libros-f2a56.web.app
 
 Gif con proceso de compra:
 
-![](../Images.tienda.gif)
+
 
