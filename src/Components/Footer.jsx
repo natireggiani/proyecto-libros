@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import {FaFacebookSquare, FaInstagramSquare, FaTwitterSquare} from "react-icons/fa";
 
 
-
 export default function Footer() {
 
     return (  

@@ -1,4 +1,5 @@
 /* NavBar */
+
 .barra{
   font-family: 'Roboto', sans-serif;
   border-bottom: 2px solid rgb(186,179,213);
@@ -27,6 +28,8 @@
   margin-bottom: 3em;
   width: 100vw;
 }
+
+
 /* ItemListContainer */
 
 .loading{
@@ -35,7 +38,9 @@
   margin: 0 auto;
 }
 
+
 /* CartWidget */
+
 .imagen-carrito{
   margin-right: 0.5em;
   margin-top: 1em;
@@ -160,6 +165,7 @@
   object-fit: contain;
 }
 
+
 /* ITEM DETAIL */
 
 .detalle-item{
@@ -203,7 +209,8 @@
   --animate-duration: 2.5s;
 }
 
-/* FORMULARIO */
+
+/* FORM*/
 
 .resumen-compra{
   background-color:rgb(213, 208, 231);
@@ -268,7 +275,6 @@
   flex-direction: column;
   margin:0 auto;
   align-content: center;
-  /* border: 1px solid red; */
 }
 
 .boton-volver{
@@ -283,6 +289,7 @@
 .boton-volver:hover{
   background-color: rgb(186,179,213);
 }
+
 
 /* FOOTER */
 
@@ -316,7 +323,7 @@
   margin-right: 0.2em;
 }
 
-/* IMAGEN CARRITO */
+/* CART */
 
 .carrito-titulo{
   font-family:'Roboto', sans-serif; 
@@ -351,7 +358,6 @@
 
 .carrito-card-img2{
   width: 5em;
-  /* height: 5em; */
   object-fit: contain;
   align-self: center;
   margin-left: 15px;
@@ -369,7 +375,6 @@
   text-align: center;
   margin-top: 20px;
 }
-
 
 .boton-agregar-cart{
   font-family: 'Roboto', sans-serif; 
@@ -420,6 +425,9 @@
 .seguir-comprando:hover{
   background-color: rgb(186,179,213);
 }
+
+/* RESPONSIVE  */
+
 @media only screen and (max-width: 1300px){
 
   .detalle-item{
@@ -434,6 +442,8 @@
     height: 15em;
   }
 }
+
+
 @media only screen and (max-width: 768px){
   .logo{
     width: 30px;
