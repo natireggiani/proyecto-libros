@@ -47,7 +47,7 @@ export default function Form() {
         }
         sendOrder()
         }
-       
+    
         if (orderId) {
             return (
                 <>
@@ -78,8 +78,11 @@ export default function Form() {
                 </div>
                 <legend className='legend'>Ingrese sus datos para finalizar:</legend>
                 <input type="text" className="formulario-input" placeholder="Nombre Completo" {...register("Name", {required: true, maxLength: 80})} />
+                <p>{errors.Name?.type === 'required' && "Complete su Nombre completo"}</p>
                 <input type="text" className="formulario-input" placeholder="Email" {...register("Email", {required: true, pattern: /^\S+@\S+$/i})} />
-                <input type="tel" className="formulario-input" placeholder="Mobile number" {...register("Tel", {required: true, minLength: 6, maxLength: 12})} />
+                <p>{errors.Email?.type === 'required' && "Ingrese un email valido"}</p>
+                <input type="tel" className="formulario-input" placeholder="Mobile number" {...register("Tel", {required: true, pattern:/^\d{11}$/,minLength: 6, maxLength: 12})} />
+                <p>{errors.Tel?.type === 'required' && "Ingrese un numero valido"}</p>
                 <input type ="submit" className="formulario-submit"/>
             </form>
             </center>       

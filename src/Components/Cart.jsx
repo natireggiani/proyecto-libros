@@ -17,6 +17,7 @@ export default function Cart() {
         totalPrecioCarrito() === 0 
         ?   <div>
                 <h1 className='carrito-titulo animate__animated animate__heartBeat'>El carrito está vacío</h1>
+                <p className='carrito-subtitulo'>Te vas a perder estas obras de arte?</p>
                 <div className='boton-agregar-cart2'>
                     <Link to='/'><Button variant='light' className='seguir-comprando' onClick= {seguirComprando}>Seguir comprando</Button></Link>
                 </div>

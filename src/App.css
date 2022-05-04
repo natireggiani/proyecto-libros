@@ -321,7 +321,14 @@
 .carrito-titulo{
   font-family:'Roboto', sans-serif; 
   text-align: center;
+  margin-bottom: 30px;
+}
+
+.carrito-subtitulo{
+  font-family:'Roboto', sans-serif; 
+  text-align: center;
   margin-bottom: 50px;
+  font-size: 1.5em;
 }
 
 .carrito-card{
@@ -457,6 +464,10 @@
     max-width: auto;
     margin: 0 auto;
     height: 10em;
+  }
+
+  .carrito-subtitulo{
+    font-size: 1em;
   }
 
   .carrito-card{

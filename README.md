@@ -17,3 +17,9 @@ spinners-react: para poder utilizar un spinner de carga.
 
 Firebase deploy:
 https://proyecto-libros-f2a56.web.app
+
+
+Gif con proceso de compra:
+
+![](../Images.tienda.gif)
+
