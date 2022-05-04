@@ -77,7 +77,7 @@ export default function Form() {
                     <p><b>Total a pagar: ${totalPrecioCarrito()}</b></p>
                 </div>
                 <legend className='legend'>Ingrese sus datos para finalizar:</legend>
-                <input type="text" className="formulario-input" placeholder="Nombre Completo" {...register("Name", {required: true, maxLength: 80})} />
+                <input type="text" className="formulario-input" placeholder="Nombre Completo" {...register("Name", {required: true, minLength: 6, maxLength: 80})} />
                 <p>{errors.Name?.type === 'required' && "Complete su Nombre completo"}</p>
                 <input type="text" className="formulario-input" placeholder="Email" {...register("Email", {required: true, pattern: /^\S+@\S+$/i})} />
                 <p>{errors.Email?.type === 'required' && "Ingrese un email valido"}</p>
