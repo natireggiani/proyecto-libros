@@ -21,9 +21,4 @@ https://proyecto-libros-f2a56.web.app
 
 Gif con proceso de compra:
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 57865263b9e04ce85e03d6bdedeed3d8580021ad
-
-![tienda](https://user-images.githubusercontent.com/94913533/166720094-513c11c2-6e63-4e09-a6bf-a92c0edb2979.gif)git 
+![tienda](https://user-images.githubusercontent.com/94913533/166720094-513c11c2-6e63-4e09-a6bf-a92c0edb2979.gif) 
