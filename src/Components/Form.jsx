@@ -62,7 +62,6 @@ export default function Form() {
         }
         
         if(carrito.length === 0){
-            alert('No hay items en el carrito')
             return <Navigate to='/'/>
         }
     
