@@ -2,7 +2,7 @@ import React, { useState }from 'react';
 import {Button} from 'react-bootstrap';
 
 export default function ItemCount({stock, onAdd} ) {
-    const [cantidad, setCantidad]= useState(1);
+    const [cantidad, setCantidad]= useState(0);
 
     const sumar = ()=>{
         if(cantidad<stock){
